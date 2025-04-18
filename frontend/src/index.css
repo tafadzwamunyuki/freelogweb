@@ -215,6 +215,26 @@
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.note {
+  color: red;
+  font-family: Arial;
+  font-weight: 500;
+  animation: blink 3s infinite;
+}
 
 /* Customize navbar toggler when it’s expanded (on mobile) */
 @media (max-width: 991.98px) {
