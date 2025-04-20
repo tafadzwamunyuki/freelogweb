@@ -1,29 +1,26 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import "../index.css"
 
-
-export default function Header() {
-  const location = useLocation();
-
+const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-info">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
-        <img src='/freelog.logo.jpeg' className='logo' alt=''/>
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    <Navbar expand="lg" bg="info" collapseOnSelect sticky="top">
+      <Container>
+        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
+          <img
+            src="/freelog.logo.jpeg"
+            alt=""
+            className="logo"
+          />
+          <span className="ms-2 fw-bold text-light"></span>
+        </Navbar.Brand>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
+        <Navbar.Toggle aria-controls="navbar-nav" />
+        
+        <Navbar.Collapse id="navbar-nav">
+          <Nav className="ms-auto text-center">
+          <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
             </li>
             <li className="nav-item">
@@ -32,9 +29,11 @@ export default function Header() {
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === '/create' ? 'active' : ''}`} to="/create">Add Article</Link>
             </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-}
+};
+
+export default Header;
