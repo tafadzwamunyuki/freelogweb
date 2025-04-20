@@ -1,6 +1,7 @@
 /* Header image */
 .landing-img {
   max-height: 1200px;
+  margin-top: 15px;
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
@@ -14,19 +15,53 @@
 }
 
 .logo {
-  width: 120px;
-  height: 65px;
-  border-radius: 35px;
+  width: 60px;
+  height: auto;
+  border-radius: 30px;
 }
 
 /* src/components/Header */
-
+/*
 .navbar {
   width: 100vw;
-  height: 5vw;
+  height: 7vw;
   padding-left: 2rem;
   padding-right: 2rem;
+
+  align-items: center;
+  margin-right: 20px;
+  font-size: 34px;
 }
+*/
+
+.navbar {
+  width: 100%;
+  height: 60px; /* Fixed height works better across devices */
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  font-size: 34px;
+  box-sizing: border-box;
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+  .navbar {
+    height: 50px;
+    padding: 0 1rem;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 45px;
+    padding: 0 0.5rem;
+    font-size: 20px;
+  }
+}
+
+
 
 .navbar-toggler {
   border: none;
@@ -49,13 +84,14 @@
 
 .nav-item .nav-link {
   font-weight: 500;
-  color: white !important;
+  color: #283133 !important;
   transition: color 0.3s ease;
+  padding-right: 80px;
 }
 
 .nav-item .nav-link:hover,
 .nav-item .nav-link.active {
-  color: #21667a !important; /* Gold accent */
+  color: #0e9dc4 !important; /* Gold accent */
 }
 
 .footer {
@@ -215,26 +251,6 @@
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-@keyframes blink {
-  0% {
-      opacity: 1;
-  }
-
-  50% {
-      opacity: 0;
-  }
-
-  100% {
-      opacity: 1;
-  }
-}
-
-.note {
-  color: red;
-  font-family: Arial;
-  font-weight: 500;
-  animation: blink 3s infinite;
-}
 
 /* Customize navbar toggler when it’s expanded (on mobile) */
 @media (max-width: 991.98px) {
@@ -255,8 +271,32 @@
 
 /* Adjust the navbar links spacing on mobile view */
 .navbar-nav .nav-link {
-  padding-left: 1.5rem;
+  padding-left: 5.9rem;
   padding-right: 1.5rem;
+  line-height: 36px;
+}
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.note {
+  color: red;
+  font-family: Arial;
+  font-weight: 500;
+  animation: blink 3s infinite;
+  font-size: 1.5rem;
+  margin-top: 25px;
 }
 
 /* Ensure the logo doesn't overflow and is responsive */
