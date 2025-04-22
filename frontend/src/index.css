@@ -208,3 +208,89 @@
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+/* Customize navbar toggler when it’s expanded (on mobile) */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+}
+
+/* For smoother transitions when toggling */
+.navbar-collapse {
+  transition: max-height 0.35s ease;
+}
+
+/* Adjust the navbar links spacing on mobile view */
+.navbar-nav .nav-link {
+  padding-left: 5.9rem;
+  padding-right: 1.5rem;
+  line-height: 36px;
+}
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.note {
+  color: red;
+  font-family: Arial;
+  font-weight: 500;
+  animation: blink 3s infinite;
+  font-size: 1.5rem;
+  margin-top: 25px;
+}
+
+/* Ensure the logo doesn't overflow and is responsive */
+.navbar-brand img {
+  width: 60px;
+  height: auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .card {
+    width: calc(33.333% - 20px); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Stack on small screens */
+  }
+}
+
+
+@media (max-width: 576px) {
+  .lead {
+    font-size: 1rem; /* Adjusts font size on smaller screens */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjusts heading size for smaller screens */
+  }
+}
+
+
+
