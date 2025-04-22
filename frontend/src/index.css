@@ -208,29 +208,3 @@
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
-/* ================= Note ================= */
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.note {
-  color: red;
-  font-family: Arial, sans-serif;
-  font-weight: 500;
-  animation: blink 3s infinite;
-  font-size: 1.5rem;
-  margin-top: 25px;
-}
-
-/* ================= Typography Adjustments ================= */
-@media (max-width: 576px) {
-  .lead {
-    font-size: 1rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-}
